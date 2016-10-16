@@ -1,0 +1,8 @@
+{
+	"config": {
+		"start": "Welcome"
+	},
+	"Welcome": {
+		"texturl": "/welcome.html"
+	}
+}
