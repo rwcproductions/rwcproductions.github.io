@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+	Adobe&#39;s ExtendScript: power with roadblocks &ndash;
+	RWC Productions
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Ricky Curtice"
+		/>
+		<meta
+			name="description"
+			content="TODO Describe your website"
+		/>
+		<meta
+			http-equiv="content-language"
+			content="en-us"
+		/>
+
+		<meta name="generator" content="Hugo 0.95.0" />
+
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/android-icon-192x192.png"
+		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#000" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#000" />
+
+		<meta
+			name="google-site-verification"
+			content="RHo0DYfe3RaT2UcLyrwXPPpknBGd--0c5oHEkKOFhR0"
+		/>
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
+			rel="stylesheet"
+		/>
+
+		<style type="text/css">
+	body > main {
+		opacity: 0;
+		transition: opacity 2s;
+	}
+	#loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(29, 29, 29);
+		opacity: 1;
+		transition: opacity 2s;
+	}
+</style>
+
+		<link href="/css/style.css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="/js/main.js"></script>
+
+		
+<script>
+	(function (i, s, o, g, r, a, m) {
+		i["GoogleAnalyticsObject"] = r;
+		(i[r] =
+			i[r] ||
+			function () {
+				(i[r].q = i[r].q || []).push(arguments);
+			}),
+			(i[r].l = 1 * new Date());
+		(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m);
+	})(
+		window,
+		document,
+		"script",
+		"https://www.google-analytics.com/analytics.js",
+		"ga"
+	);
+	ga("create", "UA-16290318-3", "auto");
+	ga("send", "pageview");
+</script>
+
+
+	</head>
+	<body>
+		<div id="loading"></div>
+		
+	<main>
+		<nav aria-label="breadcrumb">
+	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/" itemprop="item">
+				<span itemprop="name"> Home </span>
+				<meta itemprop="position" content="0" />
+			</a>
+		</li>
+
+		
+	
+
+	
+		
+	
+
+	
+
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/extendscript_roadblocks/" itemprop="item">
+				<span itemprop="name"> Adobe&#39;s ExtendScript: power with roadblocks </span>
+				<meta itemprop="position" content="1" />
+			</a>
+		</li>
+	
+
+	</ol>
+</nav>
+
+
+
+
+
+		<article class="blog">
+			<header>
+				<h1>
+					<a href="/extendscript_roadblocks/">Adobe&#39;s ExtendScript: power with roadblocks</a>
+				</h1>
+				<time datetime="2015-03-15"
+					>2015-03-15</time
+				>
+			</header>
+
+			<section class="content">
+				<p>ExtendScript is a very powerful tool for adding custom functionality to Abobe products - in my case Photoshop. I&rsquo;ve got a non-paid (family) project where I&rsquo;ve got to convert a Microsoft PowerPoint file, slide-by-slide into a series of PSDs with lots of little rules: the correct images broken out into separate layers at the correct position and layer level, text combined from all locations in the slide and filled into the correct text layers, layers shown or hidden as needed, and more. Obviously I can&rsquo;t just automate everything: I need a user to pick and choose information. Hello ScriptUI, and hello headaches.</p>
+<p>Turns out that ExtendScript, a Javascript dialect, has a few quirks. Ever had the following code crash and tell you that the property DOESN&rsquo;T EXIST? I did&hellip;</p>
+<pre>
+// Semi-deep copy object to clone.  Of course this is example code, not an actual C& P.
+var clone = {};
+for (item in object) if (object.hasOwnProperty(item)) {
+  clone[item] = object[item];
+}
+</pre>
+<p>Here&rsquo;s the reason it crashed: my source object was the Photoshop preferences object, <code>app.preferences</code>. This &ldquo;object&rdquo; is not a true JS object: it&rsquo;s a pseudo object injected into the JS runtime by the code that runs Photoshop. So when the <code>for</code>loop iterated through the properties and came to a function, it crashed trying to find the function itself. Or something like that - I&rsquo;m guessing here as I&rsquo;m not sure how Adobe implemented their JS interface.</p>
+<p>But I got past that roadblock via the following function:</p>
+<pre>
+var copyDataOnlyShallow = function ( options ) {
+	var extended = {};
+	var prop;
+	for (prop in options) {
+		//console.log("processing property", prop);
+		try {
+			if (Object.prototype.hasOwnProperty.call(options, prop)
+				typeof options[prop] !== 'function'
+			) {
+				extended[prop] = options[prop];
+			}
+		}
+		catch(e){}
+	}
+	return extended;
+};
+</pre>
+<p>Next up was how to convert the PPT/PPTX into something I can read. Thankfully I already had some practice with this one, but in BASH not in ExtendScript. Some snooping around the &rsquo;net got me to <code>app.system()</code>; - a nicely undocumented method that simply executes the passed string as if it was run on the commandline:</p>
+<pre>
+// Convert the PPT/X to an ODP by running the LibreOffice or OpenOffice.org executable headless
+//  and using junk user data so it doesn't attempt to use any existing session.
+// If it does use an existing session it causes the task to not happen.
+var retval = app.system("cd '" + script_config.ppt_disassembly_path +"';" + script_config.office_converter_path +" '-env:UserInstallation=file://" + script_config.ppt_disassembly_path +"/junkuserdata' --headless --convert-to odp:impress8 '" + source_ppt_file.fsName +"'");
+</pre>
+<p>Once that&rsquo;s done, it&rsquo;s a simple unzip to get access to all the images and the <code>content.xml</code>file that contains all the text and slide information.</p>
+<p>And then I hit a series of roadblocks. ExtendScript&rsquo;s built-in XML tool is rather limited: no XPath. It just simply converts the XML into JS objects. Not what I call easy to use when working with large complex XML documents you didn&rsquo;t hand-code for the task. But I had an ace-in-the-hole for this: in another project using <a href="http://nodejs.org/">Node.js</a> I&rsquo;d used the <a href="https://github.com/jindw/xmldom">xmldom</a> and <a href="https://github.com/goto100/xpath">xpath</a> projects to get similar jobs done. Sliding right around that roadblock like it wasn&rsquo;t even&hellip; Thud.</p>
+<p>ExtendScript, at least in CS4, uses an ANCIENT edition of Javascript. No Array.map and its ilk, none of the nice tools that make life just a little bit easier - and the node.js-based code wants all that nice stuff. Enter <a href="https://github.com/es-shims/es5-shim">es5-shim</a> and <a href="https://github.com/es-shims/es6-shim">es6-shim</a>. Then I get to learn about how each project exposes it&rsquo;s core functionality for node, and hack around that so I can get everything working in this environment:</p>
+<pre>
+// Node includes
+{
+	var XMLReader, XMLReader_backdoor;
+	(function () { // Emulate a Node.js require. Has to be in a function to prevent extra stuff from escaping.
+		#include "xmldom/sax.jsxinc";
+		// The above defines a LOCAL XMLReader function, masking the higher-scope definition.
+		XMLReader_backdoor = XMLReader; // Get that function into the higher scope.
+	})();
+	XMLReader = XMLReader_backdoor; // And get it renamed correctly.
+	XMLReader_backdoor = undefined; // Drop the old name like an old AI-powersource potato.
+	
+	// Wash, rinse, repeat.
+	var DOMImplementation, DOMImplementation_backdoor;
+	var XMLSerializer, XMLSerializer_backdoor;
+	(function () { // Emulate a Node.js require.
+		#include "xmldom/dom.jsxinc";
+		DOMImplementation_backdoor = DOMImplementation;
+		XMLSerializer_backdoor = XMLSerializer;
+	})();
+	DOMImplementation = DOMImplementation_backdoor;
+	DOMImplementation_backdoor = undefined;
+	XMLSerializer = XMLSerializer_backdoor;
+	XMLSerializer_backdoor = undefined;
+
+		var DOMParser, DOMParser_backdoor;
+		var DOMHandler, DOMHandler_backdoor;
+		(function () { // Emulate a Node.js require.
+			#include "xmldom/dom-parser.jsxinc";
+			DOMParser_backdoor = DOMParser;
+			DOMHandler_backdoor = DOMHandler;
+		})();
+		DOMParser = DOMParser_backdoor;
+		DOMParser_backdoor = undefined;
+		DOMHandler = DOMHandler_backdoor;
+		DOMHandler_backdoor = undefined;
+
+		// Already tuned for other universes like this one, doesn't need faking.
+		#include "xpath/xpath.jsxinc";
+
+}
+</pre>
+<p>HA. Serves you right! I&rsquo;ve got my cake! So I&rsquo;m off and running again. Reading the data, adding a user interface based around a series of dialog boxes interspersed by palettes that show progress bars for time-taking tasks. All was going so well until&hellip;<a href="http://knowyourmeme.com/memes/the-cake-is-a-lie"><img src="https://i.kym-cdn.com/entries/icons/mobile/000/001/707/thecakeisalie.jpg" style="float:right; height: 75px;" /></a></p>
+<p>I needed to pop up another window when the user clicked on a thumbnail. Now I was using a dialog, but those are always on top, and I wanted the preview floater to be able to stay open and be moved around. I decided to let this bug it for a while while I worked on other tasks. Eventually I found another issue related to the window being a dialog that necessitated a change-up: I needed the ability to &ldquo;delete&rdquo; a slide. This meant that, for ease of coding, after stripping the data in my data store object I simply stripped the UI&rsquo;s group containers and recreated them with the changed slide data. However, this caused Photoshop to hard crash. Press the button, and poof.<aside style="float:right;display:block;width:200px;">BTW, did you know that ScriptUI image controls CANNOT resize the images? Here&rsquo;s what the <a href="http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/scripting/pdfs/javascript_tools_guide.pdf#page=73">docs say on pg 73</a>: An image is never scaled to fit the available space.</aside></p>
+<p>It seems that ScriptUI doesn&rsquo;t like having an event handler remove the object that the handler is referencing, or even some parent thereof. In this case a button removing a parent group. Ok, that means let the button&rsquo;s event handler only work the change in the data, and simply set a flag for some other, later task to handle. Not too later of course. Too bad the main code is stuck waiting on the dialog to close. Well, let&rsquo;s just go use the <code>window</code>type instead! Yeah, yeah, not even <a href="http://www.kahrel.plus.com/indesign/scriptui.html">ScriptUI for dummies</a> touches much on windows. But it should be just like a palette, but with minimize and maximize added. Turns out I was right: but there was another problem.</p>
+<p>Photoshop only has one script engine, and that one engine doesn&rsquo;t have any long-lasting instances. This means that once the code hits the end of the script file it&rsquo;s gone. No choice. But wait! <a href="http://www.davidebarranca.com/2012/11/scriptui-bridgetalk-persistent-window-examples/">David Barranca&rsquo;s note on using BridgeTalk to show palettes</a> gets me around that one. Hours of refactoring later, including working out how to pass a bucket-load of data from one script instance to another, I went with offloading it to a file; writing my own simplified preprocessor to handle #include; catching errors so I can debug them; and dealing with tighter memory constraints, I found myself looking at a working window that stayed.</p>
+<p>And then I tried to click on a button. Any button. Hello? Code? Where my event handlers?!! A couple of hours of trying alternative ways of writing event handlers and I download <a href="http://kasyan.ho.com.ua/save_psd_png_delete.html">Kasyan Servetsky&rsquo;s example</a>. Guess what? It doesn&rsquo;t do anything either. I simplified the example just to be sure:</p>
+<pre>
+function CreatePalette() {
+	var myDialog = new Window('palette', 'test window');
+	var myGroup = myDialog.add('group', undefined, '');
+	var myButton = myGroup.add('button', undefined, 'test', {name:'test'});
+	myDialog.show();
+
+	myDialog.onClose = function(){
+		alert("And all the cake is gone. You don't even care, do you?");
+	}
+
+	myButton.onClick = function() {
+		alert("CAKE!!!");
+	}
+
+}
+
+(function () {
+	var bt = new BridgeTalk();
+	bt.target ="photoshop";
+	var myScript = CreatePalette.toString() + '\';
+	myScript += 'CreatePalette();';
+	bt.body = myScript;
+	bt.send();
+})();
+
+</pre>
+<p>Sure enough. No alerts of any kind. Ok, this obviously worked for other people&hellip; Maybe a version issue? So I test on a nearby computer loaded with CC2014. It works. Ugh.</p>
+<p>Updates soon, probably after I&rsquo;ve got everything working!</p>
+
+			</section>
+		</article>
+	</main>
+
+		
+	</body>
+</html>

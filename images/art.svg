@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 4096 4096"
+   height="4096"
+   width="4096">
+  <title
+     id="title3359">Art for RWCProductions.com</title>
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Art for RWCProductions.com</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Richard &quot;Ricky&quot; Curtice</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,3043.6378)"
+     id="layer1" />
+  <g
+     id="spinner5.1.1">
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4dc8ff;fill-opacity:0.78835976;fill-rule:evenodd;stroke:none;marker:none;enable-background:accumulate"
+       d="M 515.6582,3937.5312 C 513.27309,3947.2977 512,3957.4989 512,3968 l 20.92383,0 c 0,-8.7843 1.06538,-17.3185 3.06055,-25.4883 l -20.32618,-4.9805 z"
+       id="path3380-6" />
+  </g>
+  <g
+     id="spinner25.2.3">
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4dc8ff;fill-opacity:0.78835976;fill-rule:evenodd;stroke:none;marker:none;enable-background:accumulate"
+       d="M 20.92383,3968 C 20.923813,3908.8635 68.863453,3860.9238 128,3860.9239 L 128,3840 C 57.307552,3840 0,3897.3076 0,3968 m 128,128 c 70.69245,0 128,-57.3076 128,-128 l -20.92383,0 c -4e-5,59.1366 -47.93966,107.0762 -107.07617,107.0761"
+       id="path3380" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4dc8ff;fill-opacity:0.78835976;fill-rule:evenodd;stroke:none;marker:none;enable-background:accumulate"
+       d="M 45.484334,3968 C 45.484321,3922.4278 82.42785,3885.4843 128,3885.4844 L 128,3863 c -57.989899,0 -105,47.0101 -105,105 m 105,105 c 57.9899,0 105,-47.0102 105,-105 l -22.48434,0 c -2e-5,45.5722 -36.94353,82.5157 -82.51566,82.5156"
+       id="path3380-2" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4dc8ff;fill-opacity:0.78835976;fill-rule:evenodd;stroke:none;marker:none;enable-background:accumulate"
+       d="m 69.79725,3968 c -1e-5,-32.1444 26.058253,-58.2028 58.20275,-58.2027 L 128,3888 c -44.18278,0 -80,35.8172 -80,80 m 80,80 c 44.18279,0 80,-35.8173 80,-80 l -21.79724,0 c -3e-5,32.1444 -26.05828,58.2028 -58.20276,58.2027"
+       id="path3380-2-1" />
+  </g>
+  <g
+     id="spinner25.1.3">
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4dc8ff;fill-opacity:0.78835976;fill-rule:evenodd;stroke:none;marker:none;enable-background:accumulate"
+       d="m 276.92382,3968 c 0,-59.1365 47.93964,-107.0762 107.07617,-107.0761 L 384,3840 c -70.69247,0 -128.00002,57.3076 -127.99999,128"
+       id="path3380-3" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4dc8ff;fill-opacity:0.78835976;fill-rule:evenodd;stroke:none;marker:none;enable-background:accumulate"
+       d="m 301.48433,3968 c -10e-6,-45.5722 36.94352,-82.5157 82.51567,-82.5156 L 384,3863 c -57.9899,0 -105,47.0101 -105,105"
+       id="path3380-2-0" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4dc8ff;fill-opacity:0.78835976;fill-rule:evenodd;stroke:none;marker:none;enable-background:accumulate"
+       d="m 325.79725,3968 c -1e-5,-32.1444 26.05825,-58.2028 58.20275,-58.2027 L 384,3888 c -44.18278,0 -80,35.8172 -80,80"
+       id="path3380-2-1-9" />
+  </g>
+</svg>

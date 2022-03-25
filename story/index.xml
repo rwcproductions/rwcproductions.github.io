@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stories on RWC Productions</title>
+    <link>http://rwcproductions.github.io/story/</link>
+    <description>Recent content in Stories on RWC Productions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://rwcproductions.github.io/story/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ballad of Dorkus At The Back</title>
+      <link>http://rwcproductions.github.io/dorkus-at-the-back/</link>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://rwcproductions.github.io/dorkus-at-the-back/</guid>
+      <description>The Ballad of Dorkus At The Back was a tale I found in my dad&amp;rsquo;s old paper D&amp;amp;D archives on paper that shows that it is quite old - and showed that it was a photocopy of a photocopy.</description>
+    </item>
+    
+  </channel>
+</rss>

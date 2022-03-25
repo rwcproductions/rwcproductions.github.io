@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on RWC Productions</title>
+    <link>http://rwcproductions.github.io/page/</link>
+    <description>Recent content in Pages on RWC Productions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://rwcproductions.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing JSONS</title>
+      <link>http://rwcproductions.github.io/JSONS/</link>
+      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://rwcproductions.github.io/JSONS/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a computer programmer, and that means I&amp;rsquo;m lazy. So lazy that I&amp;rsquo;ll go out of my way doing extra work to save myself some extra effort. &lt;pre&gt;
+{&amp;ldquo;comment&amp;rdquo;:[&amp;ldquo;This is&amp;rdquo;,&amp;ldquo;a normal list&amp;rdquo;,&amp;ldquo;in an object&amp;rdquo;]},
+&amp;ldquo;followed by a string, and then a number&amp;rdquo;,
+3.14159,
+[1, 2,&amp;ldquo;and a standard heterogeneous list!&amp;rdquo;],
+&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://rwcproductions.github.io/node/9/</link>
+      <pubDate>Sun, 20 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://rwcproductions.github.io/node/9/</guid>
+      <description>As you are no doubt aware already, my name is Ricky Curtice. I was what I liked to call a nonviolent game programmer - that is to say that I wrote nonviolent games. The decision to remove violence from the primary goal of the games I create provided me an interesting set of design issues, but more often proved an advantage than it has a hindrance during my school years. Since that time I&amp;rsquo;ve gained a stronger interest in virtual/augmented reality systems and how they&amp;rsquo;ll likely change our lives dramatically over the upcoming year - if the world lasts that long.</description>
+    </item>
+    
+    <item>
+      <title>Ricky&#39;s Portfolio</title>
+      <link>http://rwcproductions.github.io/CWP/</link>
+      <pubDate>Sun, 20 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://rwcproductions.github.io/CWP/</guid>
+      <description>This online portfolio has been made to showcase the skills the Lord has blessed me with, not to brag about my accomplishments: in every demo page you will see not only the positives, but also a retrospective of each title that will demonstrate where things went wrong and the efforts taken to correct them. I am a human being, and as such do make mistakes - though with the Lord&amp;rsquo;s help I correct them.</description>
+    </item>
+    
+    <item>
+      <title>Résumé</title>
+      <link>http://rwcproductions.github.io/ricky/resume/</link>
+      <pubDate>Sun, 20 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://rwcproductions.github.io/ricky/resume/</guid>
+      <description>Dependable, highly motivated graduate with Bachelor of Science in Game Simulation Programming pursuing a challenging position in the Simulation/AR/Software field. Looking for coding/software programming position within the gaming industry that will enable me to display my creativity and innovation skills. Strong points include problem-solving, creativity, a strong work ethic, and teamwork skills. Wish to utilize my education and experience to help create quality products and services. Excellent verbal and written communication skills, great in team environments, detail-oriented and organized, self-motivated and responsible, with strong work ethic and leadership qualities. My goal is to write code that drives amazing 3D / augmented reality user experiences and work in a dynamic environment where trust and friendship among coworkers is paramount.</description>
+    </item>
+    
+    <item>
+      <title>Surviving Online Team Classes with Style</title>
+      <link>http://rwcproductions.github.io/node/4/</link>
+      <pubDate>Tue, 20 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://rwcproductions.github.io/node/4/</guid>
+      <description>Team classes can be brutal. Combine that with the class being online, and you can have a recipe for disaster - if you don&amp;rsquo;t set up a system to counter the negatives.</description>
+    </item>
+    
+    <item>
+      <title>Communication Tools</title>
+      <link>http://rwcproductions.github.io/node/5/</link>
+      <pubDate>Sun, 03 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://rwcproductions.github.io/node/5/</guid>
+      <description>Communication - the art and practice of relaying information between people - has come a long way since the old string-and-can. Today there are many services offered to help people not just communicate words, but communicate work, action, planning, documents, and much more.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RWC Productions</title>
-    <link>http://rwcproductions.github.io/</link>
-    <description>Recent content on RWC Productions</description>
+    <title>Blog articles on RWC Productions</title>
+    <link>http://rwcproductions.github.io/blog/</link>
+    <description>Recent content in Blog articles on RWC Productions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://rwcproductions.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://rwcproductions.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Site rebuilt from scratch</title>
       <link>http://rwcproductions.github.io/blog/2022-site_rebuilt/</link>
@@ -23,48 +23,6 @@
       
       <guid>http://rwcproductions.github.io/catching-transitory-files/</guid>
       <description>Trying to debug a printing problem on my Linux box, I found myself needing to read a file that was so temporary that it would be deleted automatically within a few milliseconds after its creation.</description>
-    </item>
-    
-    <item>
-      <title>Introducing JSONS</title>
-      <link>http://rwcproductions.github.io/JSONS/</link>
-      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/JSONS/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m a computer programmer, and that means I&amp;rsquo;m lazy. So lazy that I&amp;rsquo;ll go out of my way doing extra work to save myself some extra effort. &lt;pre&gt;
-{&amp;ldquo;comment&amp;rdquo;:[&amp;ldquo;This is&amp;rdquo;,&amp;ldquo;a normal list&amp;rdquo;,&amp;ldquo;in an object&amp;rdquo;]},
-&amp;ldquo;followed by a string, and then a number&amp;rdquo;,
-3.14159,
-[1, 2,&amp;ldquo;and a standard heterogeneous list!&amp;rdquo;],
-&lt;/pre&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>http://rwcproductions.github.io/node/9/</link>
-      <pubDate>Sun, 20 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/node/9/</guid>
-      <description>As you are no doubt aware already, my name is Ricky Curtice. I was what I liked to call a nonviolent game programmer - that is to say that I wrote nonviolent games. The decision to remove violence from the primary goal of the games I create provided me an interesting set of design issues, but more often proved an advantage than it has a hindrance during my school years. Since that time I&amp;rsquo;ve gained a stronger interest in virtual/augmented reality systems and how they&amp;rsquo;ll likely change our lives dramatically over the upcoming year - if the world lasts that long.</description>
-    </item>
-    
-    <item>
-      <title>Ricky&#39;s Portfolio</title>
-      <link>http://rwcproductions.github.io/CWP/</link>
-      <pubDate>Sun, 20 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/CWP/</guid>
-      <description>This online portfolio has been made to showcase the skills the Lord has blessed me with, not to brag about my accomplishments: in every demo page you will see not only the positives, but also a retrospective of each title that will demonstrate where things went wrong and the efforts taken to correct them. I am a human being, and as such do make mistakes - though with the Lord&amp;rsquo;s help I correct them.</description>
-    </item>
-    
-    <item>
-      <title>Résumé</title>
-      <link>http://rwcproductions.github.io/ricky/resume/</link>
-      <pubDate>Sun, 20 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/ricky/resume/</guid>
-      <description>Dependable, highly motivated graduate with Bachelor of Science in Game Simulation Programming pursuing a challenging position in the Simulation/AR/Software field. Looking for coding/software programming position within the gaming industry that will enable me to display my creativity and innovation skills. Strong points include problem-solving, creativity, a strong work ethic, and teamwork skills. Wish to utilize my education and experience to help create quality products and services. Excellent verbal and written communication skills, great in team environments, detail-oriented and organized, self-motivated and responsible, with strong work ethic and leadership qualities. My goal is to write code that drives amazing 3D / augmented reality user experiences and work in a dynamic environment where trust and friendship among coworkers is paramount.</description>
     </item>
     
     <item>
@@ -191,78 +149,6 @@
       
       <guid>http://rwcproductions.github.io/node/21/</guid>
       <description>SAM:DATA vs Dr. Mal Ware II: Saving Your Friend&amp;rsquo;s Computer From Being Taken Over By An Evil Overlord, or How to Defeat the Evil Doctor Again, the fast action game produced by RWC Productions, is fresh off the press!</description>
-    </item>
-    
-    <item>
-      <title>The Ballad of Dorkus At The Back</title>
-      <link>http://rwcproductions.github.io/dorkus-at-the-back/</link>
-      <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/dorkus-at-the-back/</guid>
-      <description>The Ballad of Dorkus At The Back was a tale I found in my dad&amp;rsquo;s old paper D&amp;amp;D archives on paper that shows that it is quite old - and showed that it was a photocopy of a photocopy.</description>
-    </item>
-    
-    <item>
-      <title>SAM:DATA vs Dr. Mal Ware 2</title>
-      <link>http://rwcproductions.github.io/node/17/</link>
-      <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/node/17/</guid>
-      <description>SAM:DATA vs Dr. Mal Ware 2: Saving Your Friend&amp;rsquo;s Computer From Being Taken Over By An Evil Overlord, or How to Defeat the Evil Doctor Again is an epic continuation of the original SAM:DATA vs Dr. Mal Ware game series.</description>
-    </item>
-    
-    <item>
-      <title>NLS Game Engine</title>
-      <link>http://rwcproductions.github.io/nls-game-engine/</link>
-      <pubDate>Mon, 04 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/nls-game-engine/</guid>
-      <description>This engine represents the &amp;ldquo;Next Logical Step&amp;rdquo; in engine design, utilizing the component-based entity system design pattern, modular core loading, and a centralized message system.</description>
-    </item>
-    
-    <item>
-      <title>Surviving Online Team Classes with Style</title>
-      <link>http://rwcproductions.github.io/node/4/</link>
-      <pubDate>Tue, 20 Mar 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/node/4/</guid>
-      <description>Team classes can be brutal. Combine that with the class being online, and you can have a recipe for disaster - if you don&amp;rsquo;t set up a system to counter the negatives.</description>
-    </item>
-    
-    <item>
-      <title>Aperture Attack</title>
-      <link>http://rwcproductions.github.io/node/18/</link>
-      <pubDate>Sun, 05 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/node/18/</guid>
-      <description>interNational Geographic wants you to be their next world-renowned photographer. As your first step, they have sent you to their training facility to evaluate your skills by giving you shots of objects that you need to find and take good photos of as fast as possible. Hurry up, the clock&amp;rsquo;s already ticking!</description>
-    </item>
-    
-    <item>
-      <title>Children of the Arkon: The Journey Back</title>
-      <link>http://rwcproductions.github.io/node/14/</link>
-      <pubDate>Sun, 05 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/node/14/</guid>
-      <description>Just as your squadron of XR10 star-fighters clear the hangar, an enemy Destroyer fires a powerful laser pulse deep into the reactor core of your mothership, the Alliance Defense Frigate Arkon.</description>
-    </item>
-    
-    <item>
-      <title>Kakra Racing</title>
-      <link>http://rwcproductions.github.io/node/12/</link>
-      <pubDate>Sun, 15 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/node/12/</guid>
-      <description>Kakra Racing was an online team project completed after only eight weeks of development in June of 2011 as part of the GSP-360 course offered by DeVry University.</description>
-    </item>
-    
-    <item>
-      <title>Communication Tools</title>
-      <link>http://rwcproductions.github.io/node/5/</link>
-      <pubDate>Sun, 03 Jul 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://rwcproductions.github.io/node/5/</guid>
-      <description>Communication - the art and practice of relaying information between people - has come a long way since the old string-and-can. Today there are many services offered to help people not just communicate words, but communicate work, action, planning, documents, and much more.</description>
     </item>
     
   </channel>

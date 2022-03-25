@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+	Rebuilding the script interface for NLS &ndash;
+	RWC Productions
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Ricky Curtice"
+		/>
+		<meta
+			name="description"
+			content="TODO Describe your website"
+		/>
+		<meta
+			http-equiv="content-language"
+			content="en-us"
+		/>
+
+		<meta name="generator" content="Hugo 0.95.0" />
+
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/android-icon-192x192.png"
+		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#000" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#000" />
+
+		<meta
+			name="google-site-verification"
+			content="RHo0DYfe3RaT2UcLyrwXPPpknBGd--0c5oHEkKOFhR0"
+		/>
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
+			rel="stylesheet"
+		/>
+
+		<style type="text/css">
+	body > main {
+		opacity: 0;
+		transition: opacity 2s;
+	}
+	#loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(29, 29, 29);
+		opacity: 1;
+		transition: opacity 2s;
+	}
+</style>
+
+		<link href="/css/style.css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="/js/main.js"></script>
+
+		
+<script>
+	(function (i, s, o, g, r, a, m) {
+		i["GoogleAnalyticsObject"] = r;
+		(i[r] =
+			i[r] ||
+			function () {
+				(i[r].q = i[r].q || []).push(arguments);
+			}),
+			(i[r].l = 1 * new Date());
+		(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m);
+	})(
+		window,
+		document,
+		"script",
+		"https://www.google-analytics.com/analytics.js",
+		"ga"
+	);
+	ga("create", "UA-16290318-3", "auto");
+	ga("send", "pageview");
+</script>
+
+
+	</head>
+	<body>
+		<div id="loading"></div>
+		
+	<main>
+		<nav aria-label="breadcrumb">
+	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/" itemprop="item">
+				<span itemprop="name"> Home </span>
+				<meta itemprop="position" content="0" />
+			</a>
+		</li>
+
+		
+	
+
+	
+		
+	
+
+	
+
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/node/22/" itemprop="item">
+				<span itemprop="name"> Rebuilding the script interface for NLS </span>
+				<meta itemprop="position" content="1" />
+			</a>
+		</li>
+	
+
+	</ol>
+</nav>
+
+
+
+
+
+		<article class="blog">
+			<header>
+				<h1>
+					<a href="/node/22/">Rebuilding the script interface for NLS</a>
+				</h1>
+				<time datetime="2012-11-19"
+					>2012-11-19</time
+				>
+			</header>
+
+			<section class="content">
+				<p>Back when the <a href="/node/15">NLS Game Engine</a> was the school project, named &ldquo;Saturn V&rdquo; after the rocket of the same same, Adam and I pretty much threw the scripting interface together at the last minute just to get our game demo put together - the team that was assigned the task had no programmers, leaving all of us in a bit of a bind; one of the hazards of taking school courses. When we rebuilt the code and created NLS we kept a lot of the same hodgepodge scripting interfaces, putting in more as needed to get our final game projects produced. This is what version 1 of<a href="/node/17"> SAM:DATA vs Dr. Mal Ware II</a> runs on. But now it&rsquo;s time to take what we&rsquo;ve learnt, organize it, make it consistent, and apply it - and this is what I&rsquo;m currently working on.</p>
+<p>Things I&rsquo;ve learnt:</p>
+<ul>
+<li>The global properties object (we call it &ldquo;gprops&rdquo; after the common variable name used in both scripting and C++,) never grew out of being a hack. It was supposed to be a repository for things like player stats, etc. However, simple global variables or object structures in the scripting itself are more than able to handle this use case. It also was being used to store parameters for/from various modules: the window handle and the fog settings being primary culprits. The former was a hack as there seemed to be no &ldquo;nice&rdquo; way of passing that handle to the various modules that needed it. The latter were only ever stored in the global properties object as a hack anyway: I needed a fast, simple way to control fog in the DX9 module and slamming in a set of gprops was a TON faster than setting up a set of message handlers. Which leads into the next point:</li>
+<li>The message router and entire messaging system is not needed. It was originally designed around the idea that any module needed to be able to communicate with any other module directly. It turns out that this is an invalid concept: modules only every need to communicate with scripting. If a module needs information from another module directly, there&rsquo;s a coupling issue. Better to have each module interface with scripting directly and let the game programmer decide what needs what when. In the situations where the script needs to get information from the engine on an event-driven model the modules that provide the information can set up callbacks for that task.</li>
+<li>Scripting CANNOT be a module*. By placing it in a module, in an attempt to try and make it so that different scripting engines could be used, we locked ourselves into a nasty hole: the entire interface registration had to be done in the scripting module. This meant that the moment any module needed to add something module-specific to the script language an instant dependency was made between modules. Try as we might, by using the global properties and messaging systems to provide &ldquo;abstract&rdquo; interfaces, the idea of having a modular scripting system never got any closer. So, after some discussion, I took the initiative and brought the scripting system into the main engine core.</li>
+</ul>
+<p><footnote>* At least not without some common-to-all-scripting-APIs interface, a project doomed to failure from the beginning - or at least to having a very rough time. Imagine trying to create some sort of common script API-to-C++ interface that can, without changing anything in the interface other than a flag or name, use AngelScript, LUA, Python, V8, etc.? Not fun.</footnote></p>
+<p>Refactoring the script module into the engine core was not terribly difficult. Didn&rsquo;t even change much, if anything, from the game programmer&rsquo;s perspective. Now that that is in place, it&rsquo;s time to chew on the design of the scripting system. Based on the experience I&rsquo;ve developed over the course of developing and using the engine, I&rsquo;ve determined that scripting needs to fill two major categories: first and foremost it should be the one and only glue system that turns a collection of modules into a game; secondly the scripting system should be capable enough to prototype new engine features. To accomplish these goals I&rsquo;ve started a new <a href="https://docs.google.com/document/d/11iwdN3Z8uvxiv-GWAVtIDwFkwAgCs6M42jYjCWySIBA/edit">scripting interface design document</a>. This document has been taking some time to build (half a week or so of &ldquo;free&rdquo; time thus far,) but it has seriously helped me refine the over-all concept. Let me know what you think!</p>
+
+			</section>
+		</article>
+	</main>
+
+		
+	</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+	Quaternion-based rotations added to NLS &ndash;
+	RWC Productions
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Ricky Curtice"
+		/>
+		<meta
+			name="description"
+			content="TODO Describe your website"
+		/>
+		<meta
+			http-equiv="content-language"
+			content="en-us"
+		/>
+
+		<meta name="generator" content="Hugo 0.95.0" />
+
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/android-icon-192x192.png"
+		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#000" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#000" />
+
+		<meta
+			name="google-site-verification"
+			content="RHo0DYfe3RaT2UcLyrwXPPpknBGd--0c5oHEkKOFhR0"
+		/>
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
+			rel="stylesheet"
+		/>
+
+		<style type="text/css">
+	body > main {
+		opacity: 0;
+		transition: opacity 2s;
+	}
+	#loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(29, 29, 29);
+		opacity: 1;
+		transition: opacity 2s;
+	}
+</style>
+
+		<link href="/css/style.css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="/js/main.js"></script>
+
+		
+<script>
+	(function (i, s, o, g, r, a, m) {
+		i["GoogleAnalyticsObject"] = r;
+		(i[r] =
+			i[r] ||
+			function () {
+				(i[r].q = i[r].q || []).push(arguments);
+			}),
+			(i[r].l = 1 * new Date());
+		(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m);
+	})(
+		window,
+		document,
+		"script",
+		"https://www.google-analytics.com/analytics.js",
+		"ga"
+	);
+	ga("create", "UA-16290318-3", "auto");
+	ga("send", "pageview");
+</script>
+
+
+	</head>
+	<body>
+		<div id="loading"></div>
+		
+	<main>
+		<nav aria-label="breadcrumb">
+	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/" itemprop="item">
+				<span itemprop="name"> Home </span>
+				<meta itemprop="position" content="0" />
+			</a>
+		</li>
+
+		
+	
+
+	
+		
+	
+
+	
+
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/node/25/" itemprop="item">
+				<span itemprop="name"> Quaternion-based rotations added to NLS </span>
+				<meta itemprop="position" content="1" />
+			</a>
+		</li>
+	
+
+	</ol>
+</nav>
+
+
+
+
+
+		<article class="blog">
+			<header>
+				<h1>
+					<a href="/node/25/">Quaternion-based rotations added to NLS</a>
+				</h1>
+				<time datetime="2012-11-19"
+					>2012-11-19</time
+				>
+			</header>
+
+			<section class="content">
+				<p>After an unexpected amount of work - and some &ldquo;minor&rdquo; interruptions like almost losing my vehicle&rsquo;s engine due to buildup in the oil passages - I finally got the Rotation data type into the script API. Each API method is fully unit-tested in AngelScript using the unit test library I wrote. Using unit tests has saved my bacon more times than I can count thus far! While I used to just write quick once-off tests or just stepped through my code in a debugger to see if I got something right, the unit tests keep me from having to do that over and over again. Plus since I write them before I implement the code they are to test it&rsquo;s a LOT harder to forget where I was last. But you already know the joys of using unit tests, as you&rsquo;ve been using them yourself - right?</p>
+<p>The hardest part of getting the quaternion rotations working correctly was deciphering all the &ldquo;documentation&rdquo; that exists out there - much of it contradictory, or at least not in the coordinate system I&rsquo;m working in! More than once I had to degrade to writing code I knew was likely wrong and just trying permutations until the unit tests passed - slow going. It didn&rsquo;t help that the math library I&rsquo;m using (<a href="http://glm.g-truc.net/">GLM</a> - looks like there&rsquo;s some updates since the version I&rsquo;m using) has a few oddities, and some things that just seem wrong to me, forcing me to write my own implementations - ones that might not be as fast.</p>
+<p>With that I&rsquo;ve got the two fundamental 3D data types for the engine in place. Only the Color type, the Entity, and the various generic containers left! But my next task is to get the module downloader system written into CMake, as well as adjust the code where needed to get it to compile and be useful on Mac and Linux.</p>
+
+			</section>
+		</article>
+	</main>
+
+		
+	</body>
+</html>

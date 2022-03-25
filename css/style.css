@@ -1,0 +1,534 @@
+/* # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/* Structure */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body {
+	line-height: 1;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ol,
+ul {
+	list-style: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+blockquote,
+q {
+	quotes: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End reset */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+* {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: inherit;
+
+	color: inherit;
+}
+
+/* # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/* THEME */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Goal was to have the page do a transition on load in a way that this CSS file would apply after the embedded whenever it loaded. Doesn't work that way: snaps instead of applying the transition. */
+#loading {
+	opacity: 0;
+	z-index: -1;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body > main {
+	opacity: 1;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body > main.unload > * {
+	opacity: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body {
+	background-color: #020202; /* Picked color from edge of image. */
+	background-image: url("/images/darksideimage_unann_2560.jpg");
+	background-position: top left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	color: silver;
+
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 18pt;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+main {
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article {
+	position: relative;
+	min-height: 250px;
+	transform-style: preserve-3d;
+
+	display: flex;
+	flex-direction: column;
+
+	flex: 1;
+
+	background-color: #006666;
+	/* https://stackoverflow.com/a/49108254 */
+	background: linear-gradient(45deg, #004040cc, #008080cc),
+		url("/images/noise.svg");
+	color: #adbac9;
+
+	border-radius: 30px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article::before,
+article::after {
+	content: "";
+	position: absolute;
+	transform: translateZ(-1px);
+
+	box-shadow: 0px 0px 5px 2px #00e6e6;
+
+	background-color: #00e6e6;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article::before {
+	bottom: 0;
+	left: 0;
+	height: 60%;
+	width: 60%;
+	border-bottom-left-radius: 30px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article::after {
+	top: 0;
+	right: 0;
+	height: 50%;
+	width: 50%;
+	border-top-right-radius: 30px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > header {
+	position: relative;
+	margin: 5px 25px 0 15px;
+
+	background-color: transparent;
+	color: #badaff;
+
+	font-family: "Teko", sans-serif;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > header > h1 {
+	margin-top: 1ex;
+
+	font-weight: 400;
+	font-size: 30pt;
+	font-variant: small-caps;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > header > time {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	font-size: 15pt;
+	color: #fcccbd;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > section {
+	margin-right: 4em;
+	padding: 15px;
+
+	background-color: #0a1313;
+	background: linear-gradient(45deg, #020505d9, #003030d9) fixed,
+		url("/images/noise.svg");
+
+	overflow-x: scroll;
+
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > section::-webkit-scrollbar {
+	/* Chrome */
+	display: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > section[data_totalarticlecount] {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+	gap: 40px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > section:first-of-type {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 50px 30px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > section:last-of-type {
+	flex-grow: 1;
+
+	border-bottom-left-radius: 30px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > aside {
+	position: absolute;
+	top: 70px;
+	bottom: 30px;
+	right: 0px;
+	width: 4em;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+article > aside > p {
+	line-height: 20pt;
+	text-align: center;
+
+	border-top: 5px #0d2c2a solid;
+	border-bottom: 5px #0d2c2a solid;
+
+	background-color: #006666;
+	color: #240d0b;
+
+	font-family: "Teko", sans-serif;
+	font-weight: 400;
+	font-size: 15pt;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+main > nav {
+	margin: 20px;
+
+	border-radius: 30px / 50%;
+
+	background: linear-gradient(45deg, #004040cc, #008080cc),
+		url("/images/noise.svg");
+	color: #cfe5ff;
+
+	font-family: "Teko", sans-serif;
+	font-weight: 400;
+	font-size: 25pt;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+nav > ol,
+nav > ul {
+	margin-left: 15px;
+
+	display: flex;
+
+	min-height: 60px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+nav > ol > li,
+nav > ul > li {
+	padding-right: 1.5ex;
+	line-height: 60px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+nav > ol > li:not(:first-child),
+nav > ul > li:not(:first-child) {
+	padding-left: 1ex;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+nav > ol > li:not(:last-child),
+nav > ul > li:not(:last-child) {
+	border-right: 5px #0d2c2a solid;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+pre,
+code {
+	font-family: "Roboto Mono", monospace;
+	tab-size: 2;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+pre {
+	font-size: 70%;
+	padding-left: 2rem;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content a:hover {
+	text-decoration: underline;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content a:not([href^="#"]):not([href^="/"]):after {
+	content: "\f35d";
+
+	font-family: var(--fa-style-family, "Font Awesome 6 Free");
+	font-weight: var(--fa-style, 900);
+	font-size: 50%;
+	vertical-align: super;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content h2 {
+	padding-bottom: 0.5ex;
+
+	border-bottom: 2px solid;
+
+	font-size: 110%;
+	font-weight: 700;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content h3 {
+	margin-left: 0.5em;
+
+	font-size: 110%;
+	font-weight: 700;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content h4 {
+	margin-left: 1em;
+
+	font-size: 100%;
+	font-weight: 700;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content h5 {
+	margin-left: 1em;
+
+	font-size: 100%;
+	font-weight: 400;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content h2:before,
+section.content h3:before,
+section.content h4:before,
+section.content h5:before {
+	content: "# ";
+	font-style: italic;
+	opacity: 30%;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content p {
+	text-indent: 2rem;
+	line-height: 1.2em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content > :not(:first-child),
+section.content p:not(:first-child) {
+	margin-top: 1em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content table {
+	margin-left: 2em;
+	width: calc(100% - 2em);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content ol,
+section.content ul {
+	list-style-position: inside;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content ol {
+	list-style: decimal;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content ul {
+	list-style: disc;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.content li {
+	display: list-item;
+	margin-left: 2em;
+	line-height: 1.2em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+b,
+strong {
+	font-weight: bold;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+@media only screen and (max-width: 450px) {
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article > aside {
+		display: none;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article > section {
+		margin-right: 0;
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+@media only screen and (max-width: 669px) {
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	main > article,
+	main > section > article {
+		margin: 1ex;
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+@media only screen and (min-width: 670px) {
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	main > article,
+	main > section > article {
+		margin: 5ex;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article {
+		min-width: 400px;
+	}
+}

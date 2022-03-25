@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+	Adventures in compiling for Mac OSX &ndash;
+	RWC Productions
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Ricky Curtice"
+		/>
+		<meta
+			name="description"
+			content="TODO Describe your website"
+		/>
+		<meta
+			http-equiv="content-language"
+			content="en-us"
+		/>
+
+		<meta name="generator" content="Hugo 0.95.0" />
+
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/android-icon-192x192.png"
+		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#000" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#000" />
+
+		<meta
+			name="google-site-verification"
+			content="RHo0DYfe3RaT2UcLyrwXPPpknBGd--0c5oHEkKOFhR0"
+		/>
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
+			rel="stylesheet"
+		/>
+
+		<style type="text/css">
+	body > main {
+		opacity: 0;
+		transition: opacity 2s;
+	}
+	#loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(29, 29, 29);
+		opacity: 1;
+		transition: opacity 2s;
+	}
+</style>
+
+		<link href="/css/style.css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="/js/main.js"></script>
+
+		
+<script>
+	(function (i, s, o, g, r, a, m) {
+		i["GoogleAnalyticsObject"] = r;
+		(i[r] =
+			i[r] ||
+			function () {
+				(i[r].q = i[r].q || []).push(arguments);
+			}),
+			(i[r].l = 1 * new Date());
+		(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m);
+	})(
+		window,
+		document,
+		"script",
+		"https://www.google-analytics.com/analytics.js",
+		"ga"
+	);
+	ga("create", "UA-16290318-3", "auto");
+	ga("send", "pageview");
+</script>
+
+
+	</head>
+	<body>
+		<div id="loading"></div>
+		
+	<main>
+		<nav aria-label="breadcrumb">
+	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/" itemprop="item">
+				<span itemprop="name"> Home </span>
+				<meta itemprop="position" content="0" />
+			</a>
+		</li>
+
+		
+	
+
+	
+		
+	
+
+	
+
+		<li
+			itemprop="itemListElement"
+			itemscope
+			itemtype="http://schema.org/ListItem"
+		>
+			<a href="/node/26/" itemprop="item">
+				<span itemprop="name"> Adventures in compiling for Mac OSX </span>
+				<meta itemprop="position" content="1" />
+			</a>
+		</li>
+	
+
+	</ol>
+</nav>
+
+
+
+
+
+		<article class="blog">
+			<header>
+				<h1>
+					<a href="/node/26/">Adventures in compiling for Mac OSX</a>
+				</h1>
+				<time datetime="2012-11-19"
+					>2012-11-19</time
+				>
+			</header>
+
+			<section class="content">
+				<p>I&rsquo;ve come to the conclusion that the module auto-downloader concept I&rsquo;d been working on was not useful to implement - there&rsquo;s no ability for it to scale. With potentially dozens or more of modules for the engine being possible, there&rsquo;s no sane way of building an auto-downloader that can be easily maintained and kept up-to-date. It is much simpler just to provide simple instructions for how to install a module and let the users get them from wherever they want to get them. Thus I&rsquo;ve turned my attention to getting the codebase compiling and working on OSX.</p>
+<p style="text-align: center; ">
+<img alt="Apple Xcode Logo" src="https://devimages.apple.com.edgekey.net/assets/elements/icons/128x128/xcode.png" />
+<p>What. A. Nightmare. First of all I&rsquo;m no big fan of MSVC, and I&rsquo;m blogging from a Mac right now - and wishing my Linux box was operational: long story about bad memory chips&hellip; That said, I&rsquo;d assumed when I initially stubbed support for Mac and Linux into my CMake configuration that I could use G++ - the C++ side to GCC - for both environments. I was wrong. Our codebase is written for C++11, only introduced to GCC around version <a href="http://gcc.gnu.org/projects/cxx0x.html">4.4 or 4.7</a>. Apple has apparently left their shipped-with-XCode version of GCC languishing at version 4.2. Their reason? They are going full-bore forward with <a href="http://clang.llvm.org/">clang</a>.</p>
+<img alt="" src="http://llvm.org/img/DragonSmall.png" style="float: left; " />
+<p>Clang is a rather neat front end for the LLVM compiler - in fact I&rsquo;ve become rather fond of how detailed it is at analyzing the faults in our codebase; I&rsquo;m ever interested in writing better code. However, it&rsquo;s not the default compiler - that&rsquo;s still G++. So I worked around that in CMake. Then came another shocker - while clang supports C++11, its default standard library does not. So off I went to learn about the &ndash;stdlib flag and <a href="http://libcxx.llvm.org/">libc++</a>. It was about here that I realized one of clang&rsquo;s biggest faults - no dedicated documentation. While my searches dug up some mention that the <a href="http://stackoverflow.com/questions/2624636/recommended-clang-command-line-options">best documentation for clang is &ldquo;man gcc&rdquo;</a>, trying to do that kind of interpretation, with all the testing and fact verifying involved, is not my idea of fun! I&rsquo;d much rather be forming a beautiful logic tree, or fitting a structure around the data, etc. That IS my kind of fun.</p>
+<p>Once I got all that worked out, then I tripped across a problem - one apparently quite common in this area: <a href="http://stackoverflow.com/questions/8454329/why-cant-clang-with-libc-in-c0x-mode-link-this-boostprogram-options-examp">my libraries - specifically Boost - needed to be compiled with the same flags</a>. After applying the digital equivalent of a wrench and elbow grease to my custom GetBoost.cmake I got that in place too. Now I&rsquo;m only 3 linker errors away from a full compile.</p>
+<p>These errors seem to be an interference between AngelScript, clang/LLVM, and libc++. More to come when I came get my dev environment operable again - my older Mac Mini (running Snow Leopard) decided that crazy was better than stable.</p>
+<hr />
+<p>&ndash; Update 2012-07-26 &ndash;</p>
+<p>Ok, got my systems sane again. Here&rsquo;s the linker error I&rsquo;m currently arguing with:</p>
+<pre>
+Undefined symbols for architecture x86_64:
+"std::__1::basic_string<char, char="">, std::__1::allocator<char> &gt;::operator+=(std::__1::basic_string<char, char="">, std::__1::allocator<char> &gt; const& )", referenced from:
+    RegisterStdString_Native(asIScriptEngine*) in libAngelScript.a(scriptstdstring.o)
+"std::__1::basic_string<char, char="">, std::__1::allocator<char> &gt;::empty() const", referenced from:
+    RegisterStdString_Native(asIScriptEngine*) in libAngelScript.a(scriptstdstring.o)
+</char></char,></char></char,></char></char,></pre>
+<p>So it looks like, for some reason, that basic_string&rsquo;s operator+= and empty() methods are not found by the linker. Commenting out the corresponding lines in the scriptstdstring add-on for AngelScript hides the problem and allows for compilation - thus we can know that all the rest of the methods were detected. It feels like there&rsquo;s something not quite normal about libc++ - again, documentation would be helpful. Instead I&rsquo;m going to have to digging through the source.</p>
+<p>This is one of those few times an IDE is very helpful: right-click, Jump to Definition. Makes life much easier. Here&rsquo;s the declaration and definition of these items:</p>
+<pre>
+/*line 1247*/ _LIBCPP_INLINE_VISIBILITY bool empty() const _NOEXCEPT {return size() == 0;}
+/*line 1255*/ _LIBCPP_INLINE_VISIBILITY basic_string&  operator+=(const basic_string&  __str) {return append(__str);}
+</pre>
+<p>Ok, hypothesis time: the compiler might be inlining the definitions and removing the declarations. This would definitely cause the linker to not find them.</p>
+<p>Out of time for this morning - more is coming.</p>
+<hr />
+<p>&ndash; Update 2012-07-29 &ndash;</p>
+<p>Ah, Sundays - time to really dig into the code. After some thought, and running under the assumption that my hypothesis is correct, I patched the scriptstdstring add-on to use local static functions, following the format existing in those files. This has allowed me to succeed in compiling. Now to get the OS-specific code in place so that the executable can actually run!</p>
+<p>I&rsquo;ve <a href="http://www.gamedev.net/topic/628777-scriptstdstring-add-on-under-clangllvm-40-with-libc-and-c11/">posted my discovery and patch over in the GameDev.net AngelCode forum</a> for Andreas et al to comment on.</p>
+
+			</section>
+		</article>
+	</main>
+
+		
+	</body>
+</html>
