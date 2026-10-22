@@ -532,3 +532,21 @@ strong {
 		min-width: 400px;
 	}
 }
+
+/* Source-section breadcrumbs can contain long titles; keep them usable on phones. */
+nav > ol {
+	flex-wrap: wrap;
+}
+nav > ol > li {
+	min-width: 0;
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body > main,
+	#loading {
+		transition: none;
+	}
+}

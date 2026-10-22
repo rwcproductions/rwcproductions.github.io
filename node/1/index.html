@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 	<head>
-		<title>
-	Back up again &ndash;
-	RWC Productions
-</title>
+		<title>Back up again &ndash; RWC Productions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
@@ -20,7 +17,7 @@
 			content="en-us"
 		/>
 
-		<meta name="generator" content="Hugo 0.95.0" />
+		<meta name="generator" content="Eleventy" />
 
 
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -75,7 +72,6 @@
 			rel="stylesheet"
 			type="text/css"
 			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
-			type="text/css"
 		/>
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
@@ -100,7 +96,7 @@
 </style>
 
 		<link href="/css/style.css" rel="stylesheet" />
-		
+
 		<script type="text/javascript" src="/js/main.js"></script>
 
 		
@@ -133,65 +129,34 @@
 	<body>
 		<div id="loading"></div>
 		
-	<main>
-		<nav aria-label="breadcrumb">
+<main>
+	<nav aria-label="breadcrumb">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/" itemprop="item">
-				<span itemprop="name"> Home </span>
-				<meta itemprop="position" content="0" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
-
 		
-	
-
-	
-		
-	
-
-	
-
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/node/1/" itemprop="item">
-				<span itemprop="name"> Back up again </span>
-				<meta itemprop="position" content="1" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
-	
-
+		
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/node/1/" itemprop="item" aria-current="page"><span itemprop="name">Back up again</span><meta itemprop="position" content="3" /></a>
+		</li>
+		
 	</ol>
 </nav>
 
+	<article class="blog">
+		<header>
+			<h1><a href="/node/1/">Back up again</a></h1>
+			<time datetime="2012-11-19">2012-11-19</time>
+		</header>
+		<section class="content"><p>After losing my database during a system update (bad admin! Wait, that’s me!) I’m back up and running. Good thing I backed up all my client’s data, just too bad I forgot mine. If anyone has a copy of the one interesting article I wrote on here I’d be glad to see it again! (I’ve even forgotten what subject I wrote it on… :P) Oh well. Hey, at times it’s good to start fresh! :D And this time I promise to keep regular backups… Now to get that backup script written…</p>
+</section>
+	</article>
+</main>
 
 
-
-
-		<article class="blog">
-			<header>
-				<h1>
-					<a href="/node/1/">Back up again</a>
-				</h1>
-				<time datetime="2012-11-19"
-					>2012-11-19</time
-				>
-			</header>
-
-			<section class="content">
-				<p>After losing my database during a system update (bad admin! Wait, that&rsquo;s me!) I&rsquo;m back up and running. Good thing I backed up all my client&rsquo;s data, just too bad I forgot mine. If anyone has a copy of the one interesting article I wrote on here I&rsquo;d be glad to see it again! (I&rsquo;ve even forgotten what subject I wrote it on&hellip; :P) Oh well. Hey, at times it&rsquo;s good to start fresh! :D And this time I promise to keep regular backups&hellip; Now to get that backup script written&hellip;.</p>
-
-			</section>
-		</article>
-	</main>
-
-		
 	</body>
 </html>

@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 	<head>
-		<title>
-	First release of Anaximander the Grid Cartographer &ndash;
-	RWC Productions
-</title>
+		<title>First release of Anaximander the Grid Cartographer &ndash; RWC Productions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
@@ -20,7 +17,7 @@
 			content="en-us"
 		/>
 
-		<meta name="generator" content="Hugo 0.95.0" />
+		<meta name="generator" content="Eleventy" />
 
 
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -75,7 +72,6 @@
 			rel="stylesheet"
 			type="text/css"
 			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
-			type="text/css"
 		/>
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
@@ -100,7 +96,7 @@
 </style>
 
 		<link href="/css/style.css" rel="stylesheet" />
-		
+
 		<script type="text/javascript" src="/js/main.js"></script>
 
 		
@@ -133,65 +129,34 @@
 	<body>
 		<div id="loading"></div>
 		
-	<main>
-		<nav aria-label="breadcrumb">
+<main>
+	<nav aria-label="breadcrumb">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/" itemprop="item">
-				<span itemprop="name"> Home </span>
-				<meta itemprop="position" content="0" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
-
 		
-	
-
-	
-		
-	
-
-	
-
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/anaximander-first-release/" itemprop="item">
-				<span itemprop="name"> First release of Anaximander the Grid Cartographer </span>
-				<meta itemprop="position" content="1" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
-	
-
+		
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/anaximander-first-release/" itemprop="item" aria-current="page"><span itemprop="name">First release of Anaximander the Grid Cartographer</span><meta itemprop="position" content="3" /></a>
+		</li>
+		
 	</ol>
 </nav>
 
+	<article class="blog">
+		<header>
+			<h1><a href="/anaximander-first-release/">First release of Anaximander the Grid Cartographer</a></h1>
+			<time datetime="2014-09-01">2014-09-01</time>
+		</header>
+		<section class="content"><p><a href="https://github.com/kf6kjg/Anaximander">Anaximander</a> is a tool designed for <a href="http://opensimulator.org/">OpenSimulator</a>, <a href="http://inworldz.com/">InWorldz</a>, and related grids to create world maps fast. Utilizing the power of the <a href="http://dlang.org/overview.html">D programming language</a>'s native parallism tools and down-to-the-metal compiled code, Anaximander cuts a task that took over 10 minutes on a small test grid of 27 regions to about 10 seconds.</p>
+</section>
+	</article>
+</main>
 
 
-
-
-		<article class="blog">
-			<header>
-				<h1>
-					<a href="/anaximander-first-release/">First release of Anaximander the Grid Cartographer</a>
-				</h1>
-				<time datetime="2014-09-01"
-					>2014-09-01</time
-				>
-			</header>
-
-			<section class="content">
-				<p><a href="https://github.com/kf6kjg/Anaximander">Anaximander</a> is a tool designed for <a href="http://opensimulator.org/">OpenSimulator</a>, <a href="http://inworldz.com/">InWorldz</a>, and related grids to create world maps fast. Utilizing the power of the <a href="http://dlang.org/overview.html">D programming language</a>&rsquo;s native parallism tools and down-to-the-metal compiled code, Anaximander cuts a task that took over 10 minutes on a small test grid of 27 regions to about 10 seconds.</p>
-
-			</section>
-		</article>
-	</main>
-
-		
 	</body>
 </html>

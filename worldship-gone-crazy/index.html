@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 	<head>
-		<title>
-	UPS WorldShip went crazy &ndash;
-	RWC Productions
-</title>
+		<title>UPS WorldShip went crazy &ndash; RWC Productions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
@@ -20,7 +17,7 @@
 			content="en-us"
 		/>
 
-		<meta name="generator" content="Hugo 0.95.0" />
+		<meta name="generator" content="Eleventy" />
 
 
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -75,7 +72,6 @@
 			rel="stylesheet"
 			type="text/css"
 			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
-			type="text/css"
 		/>
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
@@ -100,7 +96,7 @@
 </style>
 
 		<link href="/css/style.css" rel="stylesheet" />
-		
+
 		<script type="text/javascript" src="/js/main.js"></script>
 
 		
@@ -133,61 +129,31 @@
 	<body>
 		<div id="loading"></div>
 		
-	<main>
-		<nav aria-label="breadcrumb">
+<main>
+	<nav aria-label="breadcrumb">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/" itemprop="item">
-				<span itemprop="name"> Home </span>
-				<meta itemprop="position" content="0" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
-
 		
-	
-
-	
-		
-	
-
-	
-
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/worldship-gone-crazy/" itemprop="item">
-				<span itemprop="name"> UPS WorldShip went crazy </span>
-				<meta itemprop="position" content="1" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
-	
-
+		
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/worldship-gone-crazy/" itemprop="item" aria-current="page"><span itemprop="name">UPS WorldShip went crazy</span><meta itemprop="position" content="3" /></a>
+		</li>
+		
 	</ol>
 </nav>
 
-
-
-
-
-		<article class="blog">
-			<header>
-				<h1>
-					<a href="/worldship-gone-crazy/">UPS WorldShip went crazy</a>
-				</h1>
-				<time datetime="2014-12-23"
-					>2014-12-23</time
-				>
-			</header>
-
-			<section class="content">
-				<p>UPS WorldShip is a nice and powerful piece of software, but when things go haywire with the network share or WorldShip&rsquo;s shared folder it gets a bit weird.</p>
-<p>When I installed UPS Worldship years ago, I instructed it to keep its network files over in <code>\\drobo-fs\DataFiles\UPS</code> - which it did nicely for years. But something&rsquo;s been taking out our files on our network server at the place I work at - once or so a day near noon, starting yesterday at about half past 2pm, and wipes the network share clean of all the data on it. This causes WorldShip to crash as soon as that happens. If anyone tries to start it up again, it then does something strange: it creates a series of folders on the shared drive and then throws an error and quits.</p>
+	<article class="blog">
+		<header>
+			<h1><a href="/worldship-gone-crazy/">UPS WorldShip went crazy</a></h1>
+			<time datetime="2014-12-23">2014-12-23</time>
+		</header>
+		<section class="content"><p>UPS WorldShip is a nice and powerful piece of software, but when things go haywire with the network share or WorldShip’s shared folder it gets a bit weird.</p>
+<p>When I installed UPS Worldship years ago, I instructed it to keep its network files over in <code>\\drobo-fs\DataFiles\UPS</code> - which it did nicely for years. But something’s been taking out our files on our network server at the place I work at - once or so a day near noon, starting yesterday at about half past 2pm, and wipes the network share clean of all the data on it. This causes WorldShip to crash as soon as that happens. If anyone tries to start it up again, it then does something strange: it creates a series of folders on the shared drive and then throws an error and quits.</p>
 <p>Here are the folder names, all of which are left empty when WorldShip creates them:</p>
 <ul>
 <li><code>ADVALRES</code></li>
@@ -196,12 +162,11 @@
 <li><code>PHONE</code></li>
 <li><code>SYSLOG</code></li>
 </ul>
-<p>The only thing I could find on the &rsquo;net about this is a post on a <a href="http://mobility.forumsee.com/a/m/s/p12-32053-0655549--phone-creates-folders-windows-automatically.html">forum aggregator from Feb. 28 of this year</a>, but that person indicates a suspicion that plugging in iPhones is the culprit. From my testing, it&rsquo;s not iPhones - it&rsquo;s WorldShip getting confused because its destination folder is gone. Silly software.</p>
+<p>The only thing I could find on the 'net about this is a post on a <a href="http://mobility.forumsee.com/a/m/s/p12-32053-0655549--phone-creates-folders-windows-automatically.html">forum aggregator from Feb. 28 of this year</a>, but that person indicates a suspicion that plugging in iPhones is the culprit. From my testing, it’s not iPhones - it’s WorldShip getting confused because its destination folder is gone. Silly software.</p>
+</section>
+	</article>
+</main>
 
-			</section>
-		</article>
-	</main>
 
-		
 	</body>
 </html>

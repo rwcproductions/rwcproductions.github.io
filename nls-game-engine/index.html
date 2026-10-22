@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 	<head>
-		<title>
-	NLS Game Engine &ndash;
-	RWC Productions
-</title>
+		<title>NLS Game Engine &ndash; RWC Productions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
@@ -20,7 +17,7 @@
 			content="en-us"
 		/>
 
-		<meta name="generator" content="Hugo 0.95.0" />
+		<meta name="generator" content="Eleventy" />
 
 
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -75,7 +72,6 @@
 			rel="stylesheet"
 			type="text/css"
 			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
-			type="text/css"
 		/>
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
@@ -100,7 +96,7 @@
 </style>
 
 		<link href="/css/style.css" rel="stylesheet" />
-		
+
 		<script type="text/javascript" src="/js/main.js"></script>
 
 		
@@ -133,70 +129,39 @@
 	<body>
 		<div id="loading"></div>
 		
-	<main>
-		<nav aria-label="breadcrumb">
+<main>
+	<nav aria-label="breadcrumb">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/" itemprop="item">
-				<span itemprop="name"> Home </span>
-				<meta itemprop="position" content="0" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
-
 		
-	
-
-	
-		
-	
-
-	
-
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/nls-game-engine/" itemprop="item">
-				<span itemprop="name"> NLS Game Engine </span>
-				<meta itemprop="position" content="1" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/ricky/demonstrations/" itemprop="item"><span itemprop="name">Demonstrations</span><meta itemprop="position" content="2" /></a>
 		</li>
-	
-
+		
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/nls-game-engine/" itemprop="item" aria-current="page"><span itemprop="name">NLS Game Engine</span><meta itemprop="position" content="3" /></a>
+		</li>
+		
 	</ol>
 </nav>
 
-
-
-
-
-		<article class="game_demo">
-			<header>
-				<h1>
-					<a href="/nls-game-engine/">NLS Game Engine</a>
-				</h1>
-				<time datetime="2012-06-04"
-					>2012-06-04</time
-				>
-			</header>
-
-			<section class="content">
-				<p>This engine represents the &ldquo;Next Logical Step&rdquo; in engine design, utilizing the component-based entity system design pattern, modular core loading, and a centralized message system. The use of components, allowing easy creation of new components that can be integrated into an existing entity, and allowing dynamic core module loading, so new cores can be integrated at run-time, the engine can be expanded with minimal code.</p>
+	<article class="game_demo">
+		<header>
+			<h1><a href="/nls-game-engine/">NLS Game Engine</a></h1>
+			<time datetime="2012-06-04">2012-06-04</time>
+		</header>
+		<section class="content"><p>This engine represents the “Next Logical Step” in engine design, utilizing the component-based entity system design pattern, modular core loading, and a centralized message system. The use of components, allowing easy creation of new components that can be integrated into an existing entity, and allowing dynamic core module loading, so new cores can be integrated at run-time, the engine can be expanded with minimal code.</p>
 <h2 id="summary">Summary</h2>
-<p>The NLS Engine is a collaboration between myself and Adam Martin. It started out as a class project in game design under the name of Saturn V, but we&rsquo;ve since rebased the source code and have taken far beyond what SV was able to do.</p>
+<p>The NLS Engine is a collaboration between myself and Adam Martin. It started out as a class project in game design under the name of Saturn V, but we’ve since rebased the source code and have taken far beyond what SV was able to do.</p>
 <p>Both Saturn V and NLS were created from scratch in C++. While Saturn V was explicitly designed for executing solely on Windows, as we only had 6 weeks of development time, NLS has been scheduled to be cross platform - allowing development on all three major operating systems: Windows, Mac, and Linux in both 32 and 64 bit modes. There is a lot of work still to do, but we are making progress.</p>
 <h2 id="retrospective">Retrospective</h2>
-<p>Designing an engine from scratch is quite the difficult proposition. Thus far we&rsquo;ve proven that it is possible to do, and have even started creating games with it. However, the engine is not without its faults - but neither are any of the other engines, even the commercial ones, on the market. We&rsquo;ve yet to design a GUI toolkit for it, but the scripting system is powerful enough to make games without such.</p>
+<p>Designing an engine from scratch is quite the difficult proposition. Thus far we’ve proven that it is possible to do, and have even started creating games with it. However, the engine is not without its faults - but neither are any of the other engines, even the commercial ones, on the market. We’ve yet to design a GUI toolkit for it, but the scripting system is powerful enough to make games without such.</p>
+</section>
+	</article>
+</main>
 
-			</section>
-		</article>
-	</main>
 
-		
 	</body>
 </html>

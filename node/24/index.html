@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 	<head>
-		<title>
-	Rearranging Pivotal Tracker &ndash;
-	RWC Productions
-</title>
+		<title>Rearranging Pivotal Tracker &ndash; RWC Productions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
@@ -20,7 +17,7 @@
 			content="en-us"
 		/>
 
-		<meta name="generator" content="Hugo 0.95.0" />
+		<meta name="generator" content="Eleventy" />
 
 
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -75,7 +72,6 @@
 			rel="stylesheet"
 			type="text/css"
 			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"
-			type="text/css"
 		/>
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Teko:400,700|Roboto-Mono"
@@ -100,7 +96,7 @@
 </style>
 
 		<link href="/css/style.css" rel="stylesheet" />
-		
+
 		<script type="text/javascript" src="/js/main.js"></script>
 
 		
@@ -133,68 +129,37 @@
 	<body>
 		<div id="loading"></div>
 		
-	<main>
-		<nav aria-label="breadcrumb">
+<main>
+	<nav aria-label="breadcrumb">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/" itemprop="item">
-				<span itemprop="name"> Home </span>
-				<meta itemprop="position" content="0" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
-
 		
-	
-
-	
-		
-	
-
-	
-
-		<li
-			itemprop="itemListElement"
-			itemscope
-			itemtype="http://schema.org/ListItem"
-		>
-			<a href="/node/24/" itemprop="item">
-				<span itemprop="name"> Rearranging Pivotal Tracker </span>
-				<meta itemprop="position" content="1" />
-			</a>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
-	
-
+		
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/node/24/" itemprop="item" aria-current="page"><span itemprop="name">Rearranging Pivotal Tracker</span><meta itemprop="position" content="3" /></a>
+		</li>
+		
 	</ol>
 </nav>
 
-
-
-
-
-		<article class="blog">
-			<header>
-				<h1>
-					<a href="/node/24/">Rearranging Pivotal Tracker</a>
-				</h1>
-				<time datetime="2012-11-19"
-					>2012-11-19</time
-				>
-			</header>
-
-			<section class="content">
-				<p>I&rsquo;ve been a fan of <a href="http://pivotaltracker.com">Pivotal Tracker</a> for several years now. It&rsquo;s helped me organize and schedule iterations for everything from work tasks to school projects and more - all in the nice, fluid &ldquo;Web 2.0&rdquo; manner we&rsquo;ve been coming to expect from modern web applications. It&rsquo;s been great - until one day I suddenly needed to do some reorganization that required opening several panels at the same time. That&rsquo;s when it hit me that I was fighting the tool because it lacked a single feature: the ability to re-order my panels.</p>
-<p>Now, I&rsquo;d tried reordering the panels before in the past - just to see if they did. Since I didn&rsquo;t have any serious reason to need it, I just chocked it up to a &ldquo;they haven&rsquo;t done it yet&rdquo; and moved on. This time was different. I needed a better flow. Since I was pretty confident that they used jQuery to provide the sweet action on their pages, I loaded up my trusty web inspector - one of the many reasons I moved to Google Chrome many years ago - and, after some snooping through the very well laid out DOM, started typing up a little Javascript. One line of code later and I could rearrange my panels - within some limits.</p>
-<p>Armed now with knowledge on how to go about getting it done, I went hunting Pivotal Labs&rsquo; support pages to see if someone else had done me one better. I found a <a href="http://community.pivotaltracker.com/pivotal/topics/rearrange_panels">feature request from over 2 years ago</a>. Turns out I&rsquo;m not the only one who wanted this feature! So I posted what I&rsquo;d done, and got back an exited response from a member of the community.</p>
+	<article class="blog">
+		<header>
+			<h1><a href="/node/24/">Rearranging Pivotal Tracker</a></h1>
+			<time datetime="2012-11-19">2012-11-19</time>
+		</header>
+		<section class="content"><p>I’ve been a fan of <a href="http://pivotaltracker.com">Pivotal Tracker</a> for several years now. It’s helped me organize and schedule iterations for everything from work tasks to school projects and more - all in the nice, fluid “Web 2.0” manner we’ve been coming to expect from modern web applications. It’s been great - until one day I suddenly needed to do some reorganization that required opening several panels at the same time. That’s when it hit me that I was fighting the tool because it lacked a single feature: the ability to re-order my panels.</p>
+<p>Now, I’d tried reordering the panels before in the past - just to see if they did. Since I didn’t have any serious reason to need it, I just chocked it up to a “they haven’t done it yet” and moved on. This time was different. I needed a better flow. Since I was pretty confident that they used jQuery to provide the sweet action on their pages, I loaded up my trusty web inspector - one of the many reasons I moved to Google Chrome many years ago - and, after some snooping through the very well laid out DOM, started typing up a little Javascript. One line of code later and I could rearrange my panels - within some limits.</p>
+<p>Armed now with knowledge on how to go about getting it done, I went hunting Pivotal Labs’ support pages to see if someone else had done me one better. I found a <a href="http://community.pivotaltracker.com/pivotal/topics/rearrange_panels">feature request from over 2 years ago</a>. Turns out I’m not the only one who wanted this feature! So I posted what I’d done, and got back an exited response from a member of the community.</p>
 <p>This member wanted one more thing: my code in a Google Chrome extension. And this I did. Check it out on the <a href="https://chrome.google.com/webstore/detail/opjidnmongipncgdeggklmjihpmjollh">Chrome Web Store</a>! Of course, this extension is a tide-me-over until Pivotal Labs actually incorporates the idea themselves. Until then, enjoy!</p>
+</section>
+	</article>
+</main>
 
-			</section>
-		</article>
-	</main>
 
-		
 	</body>
 </html>
