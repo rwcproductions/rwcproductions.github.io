@@ -141,19 +141,19 @@
 		
 <main>
 	<header>
-	<nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb" class="ancestors-only">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
 		
+		
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/page/" itemprop="item"><span itemprop="name">Pages</span><meta itemprop="position" content="2" /></a>
 		</li>
 		
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="/JSONS/" itemprop="item" aria-current="page"><span itemprop="name">Introducing JSONS</span><meta itemprop="position" content="3" /></a>
-		</li>
+		
+		
 		
 	</ol>
 </nav>
@@ -171,6 +171,7 @@
 			<h1><a href="/JSONS/">Introducing JSONS</a></h1>
 			<time datetime="2016-01-04">2016-01-04</time>
 		</header>
+		
 		<section class="content"><p>I’m a computer programmer, and that means I’m lazy. So lazy that I’ll go out of my way doing extra work to save myself some extra effort. Sounds paradoxical, and it is - it’s just what happens to engineer types. In this case it meant that I’ve gotten awful tired of trying to force my code to properly terminate JSON lists, especially when I can’t keep the whole shooting match in memory - for instance if I want to have the data safely stowed away in a file when the program crashes.</p>
 <p>So to provide a mite bit easier programming, I decided to create yet another <a href="http://www.json.org/">JSON</a> variant. This matches JSON in most respects, excepting as to how the root nod is handled: it doesn’t exist. JSONS, <strong>JavaScript Object Notation Streaming</strong>, uses an implicitly declared root list instead of the normal explicitly declared root object.</p>
 <p>Standard JSON storing a list of strings:</p>

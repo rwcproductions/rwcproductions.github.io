@@ -141,19 +141,19 @@
 		
 <main>
 	<header>
-	<nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb" class="ancestors-only">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
 		
+		
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
 		
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="/worldship-gone-crazy/" itemprop="item" aria-current="page"><span itemprop="name">UPS WorldShip went crazy</span><meta itemprop="position" content="3" /></a>
-		</li>
+		
+		
 		
 	</ol>
 </nav>
@@ -171,6 +171,7 @@
 			<h1><a href="/worldship-gone-crazy/">UPS WorldShip went crazy</a></h1>
 			<time datetime="2014-12-23">2014-12-23</time>
 		</header>
+		
 		<section class="content"><p>UPS WorldShip is a nice and powerful piece of software, but when things go haywire with the network share or WorldShip’s shared folder it gets a bit weird.</p>
 <p>When I installed UPS Worldship years ago, I instructed it to keep its network files over in <code>\\drobo-fs\DataFiles\UPS</code> - which it did nicely for years. But something’s been taking out our files on our network server at the place I work at - once or so a day near noon, starting yesterday at about half past 2pm, and wipes the network share clean of all the data on it. This causes WorldShip to crash as soon as that happens. If anyone tries to start it up again, it then does something strange: it creates a series of folders on the shared drive and then throws an error and quits.</p>
 <p>Here are the folder names, all of which are left empty when WorldShip creates them:</p>

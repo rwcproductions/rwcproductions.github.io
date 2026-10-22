@@ -141,19 +141,19 @@
 		
 <main>
 	<header>
-	<nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb" class="ancestors-only">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
 		
+		
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
 		
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="/node/22/" itemprop="item" aria-current="page"><span itemprop="name">Rebuilding the script interface for NLS</span><meta itemprop="position" content="3" /></a>
-		</li>
+		
+		
 		
 	</ol>
 </nav>
@@ -171,6 +171,7 @@
 			<h1><a href="/node/22/">Rebuilding the script interface for NLS</a></h1>
 			<time datetime="2012-11-19">2012-11-19</time>
 		</header>
+		
 		<section class="content"><p>Back when the <a href="/node/15">NLS Game Engine</a> was the school project, named “Saturn V” after the rocket of the same same, Adam and I pretty much threw the scripting interface together at the last minute just to get our game demo put together - the team that was assigned the task had no programmers, leaving all of us in a bit of a bind; one of the hazards of taking school courses. When we rebuilt the code and created NLS we kept a lot of the same hodgepodge scripting interfaces, putting in more as needed to get our final game projects produced. This is what version 1 of<a href="/node/17"> SAM:DATA vs Dr. Mal Ware II</a> runs on. But now it’s time to take what we’ve learnt, organize it, make it consistent, and apply it - and this is what I’m currently working on.</p>
 <p>Things I’ve learnt:</p>
 <ul>

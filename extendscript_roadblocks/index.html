@@ -141,19 +141,19 @@
 		
 <main>
 	<header>
-	<nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb" class="ancestors-only">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
 		
+		
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
 		
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="/extendscript_roadblocks/" itemprop="item" aria-current="page"><span itemprop="name">Adobe&#39;s ExtendScript: power with roadblocks</span><meta itemprop="position" content="3" /></a>
-		</li>
+		
+		
 		
 	</ol>
 </nav>
@@ -171,6 +171,7 @@
 			<h1><a href="/extendscript_roadblocks/">Adobe&#39;s ExtendScript: power with roadblocks</a></h1>
 			<time datetime="2015-03-15">2015-03-15</time>
 		</header>
+		
 		<section class="content"><p>ExtendScript is a very powerful tool for adding custom functionality to Abobe products - in my case Photoshop. I’ve got a non-paid (family) project where I’ve got to convert a Microsoft PowerPoint file, slide-by-slide into a series of PSDs with lots of little rules: the correct images broken out into separate layers at the correct position and layer level, text combined from all locations in the slide and filled into the correct text layers, layers shown or hidden as needed, and more. Obviously I can’t just automate everything: I need a user to pick and choose information. Hello ScriptUI, and hello headaches.</p>
 <p>Turns out that ExtendScript, a Javascript dialect, has a few quirks. Ever had the following code crash and tell you that the property DOESN’T EXIST? I did…</p>
 <pre>

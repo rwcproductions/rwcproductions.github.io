@@ -141,19 +141,19 @@
 		
 <main>
 	<header>
-	<nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb" class="ancestors-only">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
 		
+		
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
 		
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="/node/24/" itemprop="item" aria-current="page"><span itemprop="name">Rearranging Pivotal Tracker</span><meta itemprop="position" content="3" /></a>
-		</li>
+		
+		
 		
 	</ol>
 </nav>
@@ -171,6 +171,7 @@
 			<h1><a href="/node/24/">Rearranging Pivotal Tracker</a></h1>
 			<time datetime="2012-11-19">2012-11-19</time>
 		</header>
+		
 		<section class="content"><p>I’ve been a fan of <a href="http://pivotaltracker.com">Pivotal Tracker</a> for several years now. It’s helped me organize and schedule iterations for everything from work tasks to school projects and more - all in the nice, fluid “Web 2.0” manner we’ve been coming to expect from modern web applications. It’s been great - until one day I suddenly needed to do some reorganization that required opening several panels at the same time. That’s when it hit me that I was fighting the tool because it lacked a single feature: the ability to re-order my panels.</p>
 <p>Now, I’d tried reordering the panels before in the past - just to see if they did. Since I didn’t have any serious reason to need it, I just chocked it up to a “they haven’t done it yet” and moved on. This time was different. I needed a better flow. Since I was pretty confident that they used jQuery to provide the sweet action on their pages, I loaded up my trusty web inspector - one of the many reasons I moved to Google Chrome many years ago - and, after some snooping through the very well laid out DOM, started typing up a little Javascript. One line of code later and I could rearrange my panels - within some limits.</p>
 <p>Armed now with knowledge on how to go about getting it done, I went hunting Pivotal Labs’ support pages to see if someone else had done me one better. I found a <a href="http://community.pivotaltracker.com/pivotal/topics/rearrange_panels">feature request from over 2 years ago</a>. Turns out I’m not the only one who wanted this feature! So I posted what I’d done, and got back an exited response from a member of the community.</p>

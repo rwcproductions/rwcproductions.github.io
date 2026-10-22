@@ -141,19 +141,19 @@
 		
 <main>
 	<header>
-	<nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb" class="ancestors-only">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="1" /></a>
 		</li>
 		
+		
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<a href="/blog/" itemprop="item"><span itemprop="name">Blog articles</span><meta itemprop="position" content="2" /></a>
 		</li>
 		
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="/node/26/" itemprop="item" aria-current="page"><span itemprop="name">Adventures in compiling for Mac OSX</span><meta itemprop="position" content="3" /></a>
-		</li>
+		
+		
 		
 	</ol>
 </nav>
@@ -171,6 +171,7 @@
 			<h1><a href="/node/26/">Adventures in compiling for Mac OSX</a></h1>
 			<time datetime="2012-11-19">2012-11-19</time>
 		</header>
+		
 		<section class="content"><p>I’ve come to the conclusion that the module auto-downloader concept I’d been working on was not useful to implement - there’s no ability for it to scale. With potentially dozens or more of modules for the engine being possible, there’s no sane way of building an auto-downloader that can be easily maintained and kept up-to-date. It is much simpler just to provide simple instructions for how to install a module and let the users get them from wherever they want to get them. Thus I’ve turned my attention to getting the codebase compiling and working on OSX.</p>
 <p style="text-align: center; ">
 <img alt="Apple Xcode Logo" src="https://devimages.apple.com.edgekey.net/assets/elements/icons/128x128/xcode.png" />

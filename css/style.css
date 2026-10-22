@@ -166,6 +166,10 @@ table {
 	--readout: #081416;
 	--lit: #00e6e6b3; /* Lit segments invert the surface, so they take the other theme's texture and translucency. */
 	--lit-noise: url("/images/noise-light.svg");
+
+	/* Frame fill: light at the top-right corner, darkening over a fixed 1000px toward the bottom-left. Pixel stops make the color depend only on distance from the corner, so separate boxes sharing that corner (the split rail's top segment) continue the article's frame exactly. Built from the tokens above, so the light theme needs no copy. */
+	--frame-fill: linear-gradient(225deg, var(--frame-b), var(--frame-a) 1000px),
+		var(--noise);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -269,8 +273,7 @@ article {
 
 	background-color: #13302f;
 	/* https://stackoverflow.com/a/49108254 */
-	background: linear-gradient(45deg, var(--frame-a), var(--frame-b)),
-		var(--noise);
+	background: var(--frame-fill);
 	color: var(--text);
 
 	border-radius: 30px;
@@ -397,15 +400,193 @@ article > aside > p {
 	line-height: 20pt;
 	text-align: center;
 
-	border-top: 2px var(--line) solid;
-	border-bottom: 2px var(--line) solid;
-
 	background-color: var(--readout);
 	color: var(--light);
 
 	font-family: "Teko", sans-serif;
 	font-weight: 400;
 	font-size: 15pt;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Rail columns (listing cards, and article pages with revision or AI notes) split into LCARS segments with see-through gaps: frame from the top corner, the readouts (revision and AI notes at the foot, listing counts near the top), then frame down to the bottom corner. The article paints its frame everywhere except that column; the frame is opaque, so the glows' fills only ever show through gaps. */
+@media only screen and (min-width: 451px) {
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-rail {
+		/* Border-box keeps the 4em column inside the cards' 400px minimum width, as the old in-flow rail was. */
+		box-sizing: border-box;
+		border-right: 4em solid transparent;
+		background-clip: padding-box;
+		/* The frame fill starts at the outer corner, which the column's top segment shares. */
+		background-origin: border-box;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-rail > section {
+		margin-right: 0;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* The header still spans the column's top, as before the split, so titles wrap at the same width and the date keeps its place; it stays over the column's top segment. */
+	article.has-rail > header {
+		z-index: 1;
+		margin-right: calc(25px - 4em);
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-rail > aside {
+		top: 0;
+		bottom: 0;
+		right: -4em;
+
+		justify-content: flex-end;
+		gap: 10px;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* The top segment shares the article's top-right corner, so the same frame fill continues it exactly. Lower segments border only the well and gaps, so they stay flat. */
+	article.has-rail > aside::before,
+	article.has-rail > aside::after {
+		content: "";
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* Column pieces overlap the frame and well by 1px, so fractional widths never open a hairline. */
+	article.has-rail > aside::before,
+	article.has-rail > aside::after,
+	article.has-rail > aside > p {
+		margin-left: -1px;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-rail > aside::before {
+		flex: 1 1 auto;
+
+		border-top-right-radius: 30px;
+
+		background: var(--frame-fill);
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-rail > aside::after {
+		flex: 0 0 30px;
+
+		border-bottom-right-radius: 30px;
+
+		background: linear-gradient(var(--frame-b), var(--frame-b)), var(--noise);
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* Listing counts sit just below the inner curve, wherever a wrapped title puts it. The card becomes a grid: header in row 1, sections in rows 2-3, and the counts column spanning rows 2-3 out in the border column. */
+	article.has-counts {
+		display: grid;
+		/* Wrap cards at a readable width, allowing a single card to fit a narrower parent. */
+		min-width: min(400px, 100%);
+		/* Wide code samples scroll inside the well instead of widening the grid beyond its frame. */
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: auto auto 1fr;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* Explicit columns let the sections share the counts' rows; auto-placement would push them into a new column instead. */
+	article.has-counts > header,
+	article.has-counts > section {
+		grid-column: 1;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-counts > section:first-of-type {
+		grid-row: 2;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-counts > section:last-of-type {
+		grid-row: 3;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-counts > section:only-of-type {
+		grid-row: 2 / 4;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* The header paints the column from the top corner down past the inner curve (30px, the well's corner height), so it follows the title's height. */
+	article.has-counts > header::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: -5px;
+		bottom: -30px;
+		right: -25px;
+		width: calc(4em + 1px);
+
+		border-top-right-radius: 30px;
+
+		background: var(--frame-fill);
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-counts > aside.counts {
+		position: relative;
+		top: auto;
+		bottom: auto;
+		right: auto;
+		margin-right: -4em;
+
+		grid-column: 1;
+		grid-row: 2 / 4;
+		justify-self: end;
+
+		justify-content: flex-start;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* Spacer under the header's piece; it stays unpainted so the first gap sits below the curve. */
+	article.has-counts > aside.counts::before {
+		flex: 0 0 30px;
+
+		border-top-right-radius: 0;
+		background: none;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-counts > aside.counts::after {
+		flex: 1 1 30px;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article.has-counts > aside.counts > p {
+		line-height: 40px;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* The top-right glow returns to the outer corner. Its fill is only ever visible through gaps, so it goes. Its inner edges are clipped: on narrow cards the left edge falls inside the column. The clip keeps the fades above the box and to its right. */
+	article.has-rail::after {
+		right: -4em;
+
+		background: transparent;
+		clip-path: polygon(
+			-20px -20px,
+			calc(100% + 20px) -20px,
+			calc(100% + 20px) calc(100% + 20px),
+			100% calc(100% + 20px),
+			100% calc(100% - 2px),
+			2px calc(100% - 2px),
+			2px 0,
+			-20px 0
+		);
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Terse codes such as AI:D stay visual; assistive technology reads the full note instead. */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -466,7 +647,7 @@ nav > ol > li:last-child,
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* Only the current crumb gives up width; on article pages its full title is the heading below. Ancestors never shrink, since any sub-pixel squeeze would trigger an ellipsis. */
+/* Only the final segment gives up width. Articles show ancestors here and their title in the heading below. Earlier ancestors never shrink, since any sub-pixel squeeze would trigger an ellipsis. */
 nav > ol > li:not(:last-child) {
 	flex-shrink: 0;
 }
@@ -677,6 +858,19 @@ section.content p:not(:first-child) {
 	margin-top: 1em;
 }
 
+/* Let verse use up to three columns when there is room for readable lines. */
+section.content .verse {
+	columns: 18em 3;
+	column-gap: 1em;
+	column-rule: 1px solid var(--muted);
+}
+
+/* Each paragraph is a stanza; keep it together and preserve its line breaks. */
+section.content .verse > p {
+	break-inside: avoid;
+	text-indent: 0;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 section.content table {
 	margin-left: 2em;
@@ -714,9 +908,86 @@ strong {
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 @media only screen and (max-width: 450px) {
+	/* Stack listing cards and let their summaries shrink within the parent well. */
+	article.has-counts {
+		min-width: 0;
+		flex-basis: 100%;
+	}
+
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	article > aside {
 		display: none;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* Disclosure must stay visible, so the notes become the frame's foot, split into LCARS segments: a filler, then one segment per note. The row sits just outside the article box so its gaps show the page, not the frame. */
+	article.has-provenance {
+		margin-bottom: calc(1ex + 40px);
+
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* The frame's rounded corners move to the segment row. */
+	article > aside.provenance + section {
+		border-bottom-left-radius: 0;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* The corner glow still caps the whole frame, so it reaches down to the row's corner. Its fill stays behind the article only; the shadow is drawn outside the box, so the gaps stay see-through. */
+	article.has-provenance::before {
+		bottom: -40px;
+		height: calc(60% + 40px);
+
+		background: linear-gradient(var(--glow) calc(100% - 40px), transparent 0);
+		/* Its inner edge is no longer hidden behind the article, so drop that side's glow. */
+		clip-path: inset(-20px 2px -20px -20px);
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article > aside.provenance {
+		display: flex;
+		top: 100%;
+		bottom: auto;
+		left: 0;
+		width: auto;
+		height: 40px;
+
+		flex-direction: row;
+		gap: 5px;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article > aside.provenance::before {
+		content: "";
+		flex: 1 1 auto;
+
+		border-bottom-left-radius: 30px;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	/* Segments share the listing readouts' flat fill, so the row reads as one surface. */
+	article > aside.provenance::before,
+	article > aside.provenance > p {
+		background: var(--readout);
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article > aside.provenance > p {
+		padding: 0 1ex;
+
+		color: var(--muted);
+		font-size: 12pt;
+		line-height: 40px;
+		white-space: nowrap;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	article > aside.provenance > p:last-child {
+		padding-right: 20px;
+
+		border-bottom-right-radius: 30px;
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -740,31 +1011,31 @@ strong {
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	/* The current crumb becomes its own bar below its ancestors, so the last ancestor takes the end cap. */
-	nav > ol {
+	nav:not(.ancestors-only) > ol {
 		flex-wrap: wrap;
 		row-gap: 10px;
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-	nav > ol > li:last-child:not(:first-child) {
+	nav:not(.ancestors-only) > ol > li:last-child:not(:first-child) {
 		flex-basis: 100%;
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 30px;
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-	nav > ol > li:last-child:not(:first-child) > a {
+	nav:not(.ancestors-only) > ol > li:last-child:not(:first-child) > a {
 		padding-left: 20px;
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-	nav > ol > li:nth-last-child(2) {
+	nav:not(.ancestors-only) > ol > li:nth-last-child(2) {
 		border-top-right-radius: 30px;
 		border-bottom-right-radius: 30px;
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-	nav > ol > li:nth-last-child(2) > a {
+	nav:not(.ancestors-only) > ol > li:nth-last-child(2) > a {
 		padding-right: 20px;
 	}
 }
