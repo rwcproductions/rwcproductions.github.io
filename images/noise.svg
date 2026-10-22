@@ -8,5 +8,5 @@
 	</filter>
 
 	<rect width='256' height='256' fill='#000000' />
-	<rect width='256' height='256' filter="url(#n)" opacity='0.80'/>
+	<rect width='256' height='256' filter="url(#n)" opacity='0.50'/>
 </svg>

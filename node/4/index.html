@@ -93,6 +93,14 @@
 		opacity: 1;
 		transition: opacity 2s;
 	}
+	@media (prefers-color-scheme: light) {
+		:root:not([data-theme="dark"]) #loading {
+			background-color: rgb(223, 233, 235);
+		}
+	}
+	:root[data-theme="light"] #loading {
+		background-color: rgb(223, 233, 235);
+	}
 </style>
 
 		<link href="/css/style.css" rel="stylesheet" />
@@ -130,6 +138,7 @@
 		<div id="loading"></div>
 		
 <main>
+	<header>
 	<nav aria-label="breadcrumb">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -146,6 +155,14 @@
 		
 	</ol>
 </nav>
+
+	<fieldset class="theme-switch" hidden>
+		<legend>Color theme</legend>
+		<label><input type="radio" name="theme" value="auto" /><span>Auto</span></label>
+		<label><input type="radio" name="theme" value="dark" /><span>Dark</span></label>
+		<label><input type="radio" name="theme" value="light" /><span>Light</span></label>
+	</fieldset>
+</header>
 
 	<article class="page">
 		<header>

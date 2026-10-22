@@ -93,6 +93,14 @@
 		opacity: 1;
 		transition: opacity 2s;
 	}
+	@media (prefers-color-scheme: light) {
+		:root:not([data-theme="dark"]) #loading {
+			background-color: rgb(223, 233, 235);
+		}
+	}
+	:root[data-theme="light"] #loading {
+		background-color: rgb(223, 233, 235);
+	}
 </style>
 
 		<link href="/css/style.css" rel="stylesheet" />
@@ -131,6 +139,7 @@
 		
 
 <main>
+	<header>
 	<nav aria-label="breadcrumb">
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -144,9 +153,17 @@
 	</ol>
 </nav>
 
+	<fieldset class="theme-switch" hidden>
+		<legend>Color theme</legend>
+		<label><input type="radio" name="theme" value="auto" /><span>Auto</span></label>
+		<label><input type="radio" name="theme" value="dark" /><span>Dark</span></label>
+		<label><input type="radio" name="theme" value="light" /><span>Light</span></label>
+	</fieldset>
+</header>
+
 	
 	<article>
-		<header><h1>&nbsp;</h1><time datetime="2012-03-21">2012-03-21</time></header>
+		<header><h1>Demonstrations</h1><time datetime="2012-03-21">2012-03-21</time></header>
 		<section class="content"><p>Below are listed a selected collection of demonstrations, each covering something special: whether a unique game concept, the result of exploring an idea, or simply an example of something I really enjoyed working on.</p>
 <p>You will note that for the games demonstrated, while the genres involved are quite diverse, death or destruction is not a part of the primary gameplay; if death or destruction exist in the game it is something to be avoided by the player, not to be dealt out by the player. This is one of my strong convictions. Those who have read the About Me section of this online book will understand why.</p>
 <p>Many, but not all, of the items demonstrated were built as course projects - this is because of how much time I dedicate to my school and my job: these combine to leave me with little time at home for anything but God and family.</p>
